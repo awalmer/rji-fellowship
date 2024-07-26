@@ -2,23 +2,33 @@ const chart = Highcharts.chart('container', {
     chart: {
         type: 'spline',
         inverted: false,
-        backgroundColor: '#eaeaea',
-        borderColor: '#264177',
-        borderWidth: 2
+        backgroundColor: '#fff',
+        borderColor: '#3e5729',
+        borderWidth: 3
     },
 
     title: {
         text: 'Global Living Planet Index',
         align: 'left',
         style: {
-            color: '#264177',
+            color: '#3b3b3b',
             fontWeight: 'bold'
         }
     },
 
     subtitle: {
-        text: 'Biodiversity Data Over Time',
-        align: 'left'
+        text: 'Indicator of Biodiversity Over Time',
+        align: 'left',
+        style: {
+            color: '#5c5c5c',
+            fontWeight: 'bold',
+            fontSize: 15
+        }
+    },
+
+    caption: {
+        text: '<b>Data Source: </b>' +
+        '<a href="https://www.livingplanetindex.org/" target="_blank">Living Planet Index database (WWF)</a>'
     },
 
     xAxis: {
@@ -38,7 +48,7 @@ const chart = Highcharts.chart('container', {
 
     yAxis: {
         title: {
-            text: 'Living Planet Index'
+            text: 'LP Index (1970 = 1)'
         },
         labels: {
             format: '{value:.2f}'
@@ -47,7 +57,7 @@ const chart = Highcharts.chart('container', {
             rangeDescription: 'Baseline 1970'
         },
         plotLines: [{
-            color: '#575757',
+            color: '#717171',
             dashStyle: 'longdashdot',
             width: 2,
             value: 1
@@ -66,7 +76,7 @@ const chart = Highcharts.chart('container', {
             marker: {
                 enabled: false
             },
-            color: '#43522e'
+            color: '#628a42'
         },
         series: {
             label: {
@@ -94,7 +104,7 @@ const chart = Highcharts.chart('container', {
         type: 'line',
         dashStyle: 'Dot',
         lineWidth: 2,
-        color: 'rgba(144, 151, 131, 0.749)',
+        color: 'rgba(178, 212, 144, 0.7)',
         sonification: { enabled: false },
         data: [
             1,0.973148947,0.947653954,0.926636049,0.902682746,0.876303107,0.849337799,0.818530892,0.789862613,0.765085063,0.74388272,0.725191062,0.699519295,0.672454963,0.645434031,0.624385823,0.60787447,0.590472787,0.573601051,0.564036784,0.554894903,0.543542372,0.528812806,0.509784962,0.492023326,0.472029372,0.462224307,0.449995846,0.438092504,0.422015856,0.408896736,0.39431147,0.383065339,0.373618957,0.367731788,0.36074307,0.35203315,0.341396352,0.328353591,0.311678583,0.295962132,0.280500189,0.270858778,0.26500441,0.263834578,0.262812118,0.257702126,0.254654517,0.25400315
@@ -106,7 +116,7 @@ const chart = Highcharts.chart('container', {
         type: 'line',
         dashStyle: 'Dot',
         lineWidth: 2,
-        color: 'rgba(144, 151, 131, 0.749)',
+        color: 'rgba(178, 212, 144, 0.7)',
         sonification: { enabled: false },
         data: [
             1,1.009532123,1.011930825,1.01005601,1.006185497,0.997971052,0.984079385,0.956108932,0.927871614,0.906706792,0.892105091,0.878251131,0.853322953,0.825459349,0.798806095,0.779047038,0.763793401,0.745704139,0.727827188,0.718383787,0.710306149,0.699998084,0.684920136,0.663660057,0.643275453,0.620324969,0.610120352,0.596143703,0.581777225,0.561624015,0.545681729,0.529140444,0.516829678,0.506665223,0.501212936,0.4944708,0.485931377,0.473578765,0.457816396,0.437304842,0.418612842,0.400057175,0.388422426,0.381353535,0.38071988,0.380687196,0.375621374,0.373430403,0.374378072
